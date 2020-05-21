@@ -1,0 +1,735 @@
+/*!
+Theme Name: BlogTheme
+Theme URI: http://underscores.me/
+Author: Magdalena Duma
+Author URI: http://BlogTheme.com
+Description: Moje ćwiczenia wordpressowe na nowym motywie BlogTheme
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: blog_theme
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+BlogTheme is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+	/* usunęłam */
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+	/* usunęłam */
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+	/* usunęłam */
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+	/* usunęłam */
+
+	.form-conrol.input-lg {
+		width: 100%;
+	}
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/* NIC TU NIE BYŁO */
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+	/* usunęłam */
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+	/*usunęłam*/
+
+	/* Small menu - class WordPress */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.site-main .comment-navigation,
+.site-main
+.posts-navigation,
+.site-main
+.post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: 700;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1.5em;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear::before,
+.clear::after,
+.entry-content::before,
+.entry-content::after,
+.comment-content::before,
+.comment-content::after,
+.site-header::before,
+.site-header::after,
+.site-content::before,
+.site-content::after,
+.site-footer::before,
+.site-footer::after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear::after,
+.entry-content::after,
+.comment-content::after,
+.site-header::after,
+.site-content::after,
+.site-footer::after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.post,
+.page {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+/* specific WordPress comment styles */
+#comments footer {
+	background: none; 
+	color: inherit;
+}
+
+#comments footer a {
+	color: inherit;
+}
+
+#comments .comment-metadata {
+	margin: 10px 0 0;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+
+/* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+	display: none;
+}
+
+/* Re-display the Theme Footer when Infinite Scroll has reached its end. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+
+
+
+
+
+
+/* początek blog css - 1strona + blog*/
+
+/* stylelint-disable selector-list-comma-newline-after */
+
+
+/* i can see whats under the WP uppper pasek*/
+.logged-in.wp-custom-logo {
+	top: 32px;
+}
+
+
+
+body {
+	font-family: 'proxima-nova', 'Raleway', Helvetica, sans-serif;
+	font-size: 16px;
+	background: url('/wp-content/themes/blog_theme/assets/img/tile.jpg') top left repeat;
+}
+
+
+.blog-header {
+	line-height: 1;
+	border-bottom: 1px solid #e5e5e5;
+  }
+  
+  /* edycja img w blogu */
+  .post-image img {
+	  height: 70% !important;
+  }
+  
+
+
+
+
+
+
+  .nav.navbar-nav ul, ul li.page_item {
+	display: block;
+	list-style: none;
+	margin: 0 10px;
+	padding: 0;
+}
+
+.nav.navbar-nav ul li.page_item {
+	display: inline;
+	white-space: nowrap;
+}
+
+.nav.navbar-nav ul li.page_item a {
+	text-decoration: none;
+	color: white;
+}
+.nav.navbar-nav ul li.page_item a:hover,
+.nav.navbar-nav ul li.page_item a:active{
+	color: rgb(90, 255, 85);
+}
+
+
+
+  
+  
+  .blog-header-logo:hover {
+	text-decoration: none;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+	font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  }
+  
+  .display-4 {
+	font-size: 2.5rem;
+  }
+
+	/* Fix the top margin when logged in 
+@media screen and (max-width: 782px) {
+home blog logged-in admin-bar wp-custom-logo hfeed customize-support
+	.logged-in .navbar-fixed-top {
+		top: 72px;
+	}
+}
+*/
+
+  @media (min-width: 768px) {
+	.display-4 {
+	  font-size: 3rem;
+	}
+  }
+  
+  .nav-scroller {
+	position: relative;
+	z-index: 2;
+	height: 2.75rem;
+	overflow-y: hidden;
+  }
+  
+  .nav-scroller .nav {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	padding-bottom: 1rem;
+	margin-top: -1px;
+	overflow-x: auto;
+	text-align: center;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+  }
+  
+  .nav-scroller .nav-link {
+	padding-top: .75rem;
+	padding-bottom: .75rem;
+	font-size: .875rem;
+  }
+  
+  .card-img-right {
+	height: 100%;
+	border-radius: 0 3px 3px 0;
+  }
+  
+  .flex-auto {
+	-ms-flex: 0 0 auto;
+	-webkit-box-flex: 0;
+	flex: 0 0 auto;
+  }
+  
+  .h-250 { height: 250px; }
+  @media (min-width: 768px) {
+	.h-md-250 { height: 250px; }
+  }
+  
+  .border-top { border-top: 1px solid #e5e5e5; }
+  .border-bottom { border-bottom: 1px solid #e5e5e5; }
+  
+  .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+  
+  /*
+   * Blog name and description
+   */
+  .blog-title {
+	margin-bottom: 0;
+	font-size: 2rem;
+	font-weight: 400;
+  }
+  .blog-description {
+	font-size: 1.1rem;
+	color: #999;
+  }
+  
+  @media (min-width: 40em) {
+	.blog-title {
+	  font-size: 3.5rem;
+	}
+  }
+  
+  /* Pagination */
+  .blog-pagination {
+	margin-bottom: 4rem;
+  }
+  .blog-pagination > .btn {
+	border-radius: 2rem;
+  }
+  
+  /*
+   * Blog posts
+   */
+  .blog-post {
+	margin-bottom: 4rem;
+  }
+  .blog-post-title {
+	margin-bottom: .25rem;
+	font-size: 2.5rem;
+  }
+  .blog-post-meta {
+	margin-bottom: 1.25rem;
+	color: #999;
+  }
+  
+  /*
+   * Footer
+   */
+  .blog-footer {
+	padding: 2.5rem 0;
+	color: #999;
+	text-align: center;
+	background-color: #f9f9f9;
+	border-top: .05rem solid #e5e5e5;
+  }
+  .blog-footer p:last-child {
+	margin-bottom: 0;
+  }
+  
+
+
+
+  /* koniec blog css*/
+
+
+
+
+
+
+
+
+  /*===============================================================================================
+  	logowanie - home page
+  */
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* ================================================================== 
+edycja artykułów na Blogu
+*/
+
+.post-image img,
+.post-thumbnail img {
+	width: 100%;
+}
+
+.post-excerpt,
+.entry-summary p {
+	padding: 20px;
+	word-wrap: break-word;
+    background-color: white;
+    border: 1px dotted lightgrey;
+	background-color: #fff;
+}
+
+/* ================================================================== 
+edycja widgetów - szukanie
+*/
+a {
+	color: #28a745;
+}
+a:hover {
+	text-decoration: none;
+	color: #bddd0a;
+}
+input.search-submit {
+	border-radius: 5px;
+    padding: 8px 10px;
+    border: solid 1px #28a745;
+ 	background-color: transparent;
+    color: #28a745;
+}
+input.search-field {
+	border-radius: 5px;
+    padding: 8px 10px;
+    border: solid 1px #28a745;
+}
+input.search-submit:hover {
+	background-color: #28a745;
+	color: white;
+}
+
+
+
+
+.row + .row {
+	margin-top: 20px;
+}
+
+section.feature-image {
+	padding: 80px 0;
+}
+
+section.main-content {
+	padding: 40px 0;
+}
+
+.section-header {
+	text-align: center;
+}
+
+section h2 {
+	margin: 20px 0 40px;
+}
+
+section h3 {
+	margin: 30px 0 10px;
+}
+
+#primary {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.feature-image {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+.feature-image-default {
+	background: url('/wp-content/themes/blog_theme/assets/img/stuff-feature.jpg') no-repeat;
+	background-size: cover;
+}
+
+.feature-image-default-alt {
+	background: url('/wp-content/themes/blog_theme/assets/img/hipster-stuff.jpg') no-repeat;
+	background-size: cover;
+}
+
+.feature-image h1 {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	color: white;
+}
